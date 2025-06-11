@@ -593,19 +593,28 @@ margin-top: 1rem;
 /* #### Media Queries #### */
 
 @media screen and (min-width: 768px){
-   
-    .home-div .center {
+    .header {
+        background-attachment: scroll;
+        background-size: cover;
+        background-position: center;
+    }
+   .home-div {
+       padding-top: 40%;
+       text-align: center;
+    }
+    .home-div h1 {
+        font-size: 2rem;
+    }
+    .home-div p {
+        font-size: 1rem;
+        letter-spacing: 1px;
+     }
+    .habilities .row,
+    .projects .row,
+    .contact .row {
         display: flex;
         flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-        padding-top: 30vh;
-        text-align: center;
-    }
-    .habilities .row{
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 2rem;
+        gap: 1rem;
     }
     .habilities-item{
         margin: 0;;
@@ -617,6 +626,9 @@ margin-top: 1rem;
         font-size: 1.2rem;
         width: 75%;
         margin: 0 auto;
+    }
+    section {
+        padding: 1.5rem 0;
     }
     .team-item{
         margin: 0;
@@ -638,6 +650,15 @@ margin-top: 1rem;
     }
     .contact-right > div:first-child{
         margin-top: 0;
+    }
+    .video-vertical-wrapper {
+        width: 100%;
+        max-width: 100%;
+        aspect-ratio: 9 / 16;
+    }
+    .video-vertical-wrapper iframe {
+        width: 100%;
+        height: auto;
     }
 }
 
@@ -716,7 +737,7 @@ margin-top: 1rem;
 }
 
 @media screen and (min-width: 1200px){
-     .home-div .center {
+    .home-div .center {
         align-items: flex-start;
         padding-top: 60% !important;
     }
